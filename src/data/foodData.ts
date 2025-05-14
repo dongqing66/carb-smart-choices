@@ -56,6 +56,55 @@ export const foodItems: FoodItem[] = [
     category: 'staple',
     description: '含有丰富的维生素和矿物质，但升糖指数中等'
   },
+  {
+    id: 31,
+    name: '糙米饭',
+    glycemicIndex: 50,
+    category: 'staple',
+    description: '比白米饭含有更多纤维，升糖指数较低'
+  },
+  {
+    id: 32,
+    name: '藜麦',
+    glycemicIndex: 53,
+    category: 'staple',
+    description: '富含蛋白质和纤维的全谷物，升糖指数中等'
+  },
+  {
+    id: 33,
+    name: '玉米',
+    glycemicIndex: 52,
+    category: 'staple',
+    description: '含有丰富的纤维和维生素，升糖指数中等'
+  },
+  {
+    id: 34,
+    name: '土豆',
+    glycemicIndex: 78,
+    category: 'staple',
+    description: '烤土豆升糖指数高，煮熟后冷却的土豆升糖指数较低'
+  },
+  {
+    id: 35,
+    name: '荞麦面',
+    glycemicIndex: 54,
+    category: 'staple',
+    description: '不含麸质，富含蛋白质和矿物质，升糖指数中等'
+  },
+  {
+    id: 36,
+    name: '小米粥',
+    glycemicIndex: 71,
+    category: 'staple',
+    description: '熬成粥后升糖指数较高，建议少量食用'
+  },
+  {
+    id: 37,
+    name: '粗粮馒头',
+    glycemicIndex: 48,
+    category: 'staple',
+    description: '添加了全麦粉和其他粗粮，升糖指数中等'
+  },
   
   // Fruits
   {
@@ -92,6 +141,55 @@ export const foodItems: FoodItem[] = [
     glycemicIndex: 40,
     category: 'fruit',
     description: '低升糖指数，富含抗氧化物质'
+  },
+  {
+    id: 38,
+    name: '蓝莓',
+    glycemicIndex: 53,
+    category: 'fruit',
+    description: '富含抗氧化物质，升糖指数中等'
+  },
+  {
+    id: 39,
+    name: '樱桃',
+    glycemicIndex: 22,
+    category: 'fruit',
+    description: '低升糖指数，富含抗氧化物质和维生素'
+  },
+  {
+    id: 40,
+    name: '葡萄',
+    glycemicIndex: 59,
+    category: 'fruit',
+    description: '含糖量较高，升糖指数中等'
+  },
+  {
+    id: 41,
+    name: '猕猴桃',
+    glycemicIndex: 52,
+    category: 'fruit',
+    description: '富含维生素C和纤维，升糖指数中等'
+  },
+  {
+    id: 42,
+    name: '芒果',
+    glycemicIndex: 56,
+    category: 'fruit',
+    description: '含糖量较高，但也富含维生素和纤维，升糖指数中等'
+  },
+  {
+    id: 43,
+    name: '柚子',
+    glycemicIndex: 25,
+    category: 'fruit',
+    description: '低升糖指数，富含维生素C和纤维'
+  },
+  {
+    id: 44,
+    name: '梨',
+    glycemicIndex: 38,
+    category: 'fruit',
+    description: '低升糖指数，富含纤维'
   },
   
   // Proteins
@@ -130,6 +228,41 @@ export const foodItems: FoodItem[] = [
     category: 'protein',
     description: '优质蛋白质来源，不影响血糖'
   },
+  {
+    id: 45,
+    name: '虾',
+    glycemicIndex: 0,
+    category: 'protein',
+    description: '纯蛋白质，不含碳水化合物，不会影响血糖'
+  },
+  {
+    id: 46,
+    name: '猪肉瘦肉',
+    glycemicIndex: 0,
+    category: 'protein',
+    description: '蛋白质来源，不含碳水化合物，不影响血糖'
+  },
+  {
+    id: 47,
+    name: '羊肉',
+    glycemicIndex: 0,
+    category: 'protein',
+    description: '蛋白质和脂肪，不含碳水化合物，不影响血糖'
+  },
+  {
+    id: 48,
+    name: '金枪鱼',
+    glycemicIndex: 0,
+    category: 'protein',
+    description: '富含omega-3脂肪酸，不含碳水化合物'
+  },
+  {
+    id: 49,
+    name: '鸭肉',
+    glycemicIndex: 0,
+    category: 'protein',
+    description: '蛋白质和脂肪，不含碳水化合物，不影响血糖'
+  },
   
   // Dairy products
   {
@@ -166,6 +299,34 @@ export const foodItems: FoodItem[] = [
     glycemicIndex: 33,
     category: 'dairy',
     description: '无糖酸奶升糖指数较低，含糖酸奶则较高'
+  },
+  {
+    id: 50,
+    name: '脱脂牛奶',
+    glycemicIndex: 32,
+    category: 'dairy',
+    description: '低脂肪，但升糖指数与全脂牛奶相似'
+  },
+  {
+    id: 51,
+    name: '鲜奶油',
+    glycemicIndex: 0,
+    category: 'dairy',
+    description: '主要含脂肪，几乎不含碳水化合物，不影响血糖'
+  },
+  {
+    id: 52,
+    name: '酸奶乳酪',
+    glycemicIndex: 10,
+    category: 'dairy',
+    description: '发酵乳制品，升糖指数非常低'
+  },
+  {
+    id: 53,
+    name: '羊奶',
+    glycemicIndex: 27,
+    category: 'dairy',
+    description: '比牛奶含有更多蛋白质和钙，升糖指数低'
   },
   
   // Nuts
@@ -204,6 +365,41 @@ export const foodItems: FoodItem[] = [
     category: 'nut',
     description: '低升糖指数，是健康的零食选择'
   },
+  {
+    id: 54,
+    name: '榛子',
+    glycemicIndex: 0,
+    category: 'nut',
+    description: '富含维生素E和健康脂肪，不会提高血糖'
+  },
+  {
+    id: 55,
+    name: '松子',
+    glycemicIndex: 0,
+    category: 'nut',
+    description: '富含抗氧化物和健康脂肪，不影响血糖'
+  },
+  {
+    id: 56,
+    name: '巴西坚果',
+    glycemicIndex: 0,
+    category: 'nut',
+    description: '富含硒和健康脂肪，不会提高血糖'
+  },
+  {
+    id: 57,
+    name: '夏威夷果',
+    glycemicIndex: 0,
+    category: 'nut',
+    description: '富含单不饱和脂肪，不影响血糖水平'
+  },
+  {
+    id: 58,
+    name: '瓜子',
+    glycemicIndex: 35,
+    category: 'nut',
+    description: '含有较多膳食纤维，升糖指数较低'
+  },
   
   // Sweets
   {
@@ -240,5 +436,54 @@ export const foodItems: FoodItem[] = [
     glycemicIndex: 57,
     category: 'sweet',
     description: '含有大量糖和脂肪，升糖指数中等偏高'
+  },
+  {
+    id: 59,
+    name: '牛轧糖',
+    glycemicIndex: 78,
+    category: 'sweet',
+    description: '高升糖指数，含有大量糖和脂肪'
+  },
+  {
+    id: 60,
+    name: '巧克力饼干',
+    glycemicIndex: 74,
+    category: 'sweet',
+    description: '高升糖指数，含有精制面粉和糖'
+  },
+  {
+    id: 61,
+    name: '奶糖',
+    glycemicIndex: 70,
+    category: 'sweet',
+    description: '含有大量糖和脂肪，升糖指数高'
+  },
+  {
+    id: 62,
+    name: '果汁',
+    glycemicIndex: 66,
+    category: 'sweet',
+    description: '比整个水果升糖指数更高，缺乏膳食纤维'
+  },
+  {
+    id: 63,
+    name: '苏打饮料',
+    glycemicIndex: 63,
+    category: 'sweet',
+    description: '含有大量精制糖，升糖指数中等偏高'
+  },
+  {
+    id: 64,
+    name: '枣泥糕',
+    glycemicIndex: 70,
+    category: 'sweet',
+    description: '虽然用枣制作，但升糖指数仍然较高'
+  },
+  {
+    id: 65,
+    name: '糖浆',
+    glycemicIndex: 90,
+    category: 'sweet',
+    description: '极高升糖指数，含有高浓度的糖'
   }
 ];

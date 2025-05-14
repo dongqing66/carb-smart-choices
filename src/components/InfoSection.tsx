@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Separator } from "@/components/ui/separator";
 
 const InfoSection = () => {
   return (
@@ -42,6 +43,22 @@ const InfoSection = () => {
           </AccordionContent>
         </AccordionItem>
       </Accordion>
+      
+      <Separator className="my-6" />
+      
+      <div className="text-sm text-muted-foreground">
+        <h3 className="font-medium mb-2">数据来源</h3>
+        <p>本网站的升糖指数数据来源于：</p>
+        <ul className="list-disc pl-6 mt-1 space-y-1">
+          <li>国际升糖指数数据库 (International Tables of Glycemic Index and Glycemic Load Values)</li>
+          <li>中国疾病预防控制中心营养与健康所 - 《中国食物成分表》(2019年版)</li>
+          <li>Harvard Health Publishing - Harvard Medical School</li>
+          <li>美国糖尿病协会 (American Diabetes Association)</li>
+        </ul>
+        <p className="mt-2">
+          注意：不同来源的升糖指数数据可能存在轻微差异，主要受食物品种、产地、熟度、烹饪方式等因素影响。本站数据仅供参考，具体饮食建议请咨询专业营养师或医生。
+        </p>
+      </div>
     </div>
   );
 };
