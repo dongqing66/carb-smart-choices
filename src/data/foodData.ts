@@ -1,14 +1,14 @@
-
 export interface FoodItem {
   id: number;
   name: string;
   glycemicIndex: number;
+  glycemicLoad?: number; // Added GL field as optional
   category: FoodCategory;
   description: string;
   imageUrl?: string;
 }
 
-export type FoodCategory = 'staple' | 'fruit' | 'protein' | 'dairy' | 'nut' | 'sweet';
+export type FoodCategory = 'staple' | 'fruit' | 'protein' | 'dairy' | 'nut' | 'sweet' | 'beverage';
 
 export const foodCategories = [
   { id: 'staple', label: '主食', description: '面包，米饭，面条等' },
@@ -17,6 +17,7 @@ export const foodCategories = [
   { id: 'dairy', label: '乳制品', description: '牛奶，奶酪，酸奶等' },
   { id: 'nut', label: '坚果', description: '杏仁，核桃，花生等' },
   { id: 'sweet', label: '甜食', description: '蛋糕，冰淇淋，巧克力等' },
+  { id: 'beverage', label: '饮品', description: '咖啡，奶茶，果汁等' },
 ];
 
 export const foodItems: FoodItem[] = [
@@ -326,7 +327,7 @@ export const foodItems: FoodItem[] = [
     name: '羊奶',
     glycemicIndex: 27,
     category: 'dairy',
-    description: '比牛奶含有更多蛋白质和钙，升糖指数低'
+    description: '比牛奶含有��多蛋白质和钙，升糖指数低'
   },
   
   // Nuts
@@ -485,5 +486,111 @@ export const foodItems: FoodItem[] = [
     glycemicIndex: 90,
     category: 'sweet',
     description: '极高升糖指数，含有高浓度的糖'
+  },
+  
+  // New Beverage Category
+  {
+    id: 66,
+    name: '美式咖啡',
+    glycemicIndex: 0,
+    glycemicLoad: 0,
+    category: 'beverage',
+    description: '不含糖的美式咖啡几乎不会影响血糖'
+  },
+  {
+    id: 67,
+    name: '拿铁咖啡',
+    glycemicIndex: 28,
+    glycemicLoad: 2,
+    category: 'beverage',
+    description: '由咖啡和牛奶混合而成，不加糖时升糖指数和升糖负荷都较低'
+  },
+  {
+    id: 68,
+    name: '摩卡咖啡',
+    glycemicIndex: 40,
+    glycemicLoad: 10,
+    category: 'beverage',
+    description: '含有咖啡、牛奶和巧克力，升糖指数中等'
+  },
+  {
+    id: 69,
+    name: '卡布奇诺',
+    glycemicIndex: 25,
+    glycemicLoad: 4,
+    category: 'beverage',
+    description: '由浓缩咖啡和蒸汽牛奶制成，不加糖时升糖指数低'
+  },
+  {
+    id: 70,
+    name: '浓缩咖啡',
+    glycemicIndex: 0,
+    glycemicLoad: 0,
+    category: 'beverage',
+    description: '纯咖啡，不含糖和牛奶，不会影响血糖'
+  },
+  {
+    id: 71,
+    name: '珍珠奶茶',
+    glycemicIndex: 65,
+    glycemicLoad: 30,
+    category: 'beverage',
+    description: '含有大量糖和珍珠（淀粉），升糖指数和升糖负荷都较高'
+  },
+  {
+    id: 72,
+    name: '水果茶',
+    glycemicIndex: 55,
+    glycemicLoad: 15,
+    category: 'beverage',
+    description: '根据添加的水果和糖量不同，升糖指数和升糖负荷可能有所差异'
+  },
+  {
+    id: 73,
+    name: '抹茶拿铁',
+    glycemicIndex: 30,
+    glycemicLoad: 5,
+    category: 'beverage',
+    description: '抹茶中的儿茶素可能有助于控制血糖，但糖和牛奶会增加升糖负荷'
+  },
+  {
+    id: 74,
+    name: '乌龙奶茶',
+    glycemicIndex: 57,
+    glycemicLoad: 22,
+    category: 'beverage',
+    description: '含糖和牛奶，升糖指数中等，但升糖负荷较高'
+  },
+  {
+    id: 75,
+    name: '芋圆奶茶',
+    glycemicIndex: 68,
+    glycemicLoad: 34,
+    category: 'beverage',
+    description: '芋圆含有大量淀粉，加上糖和牛奶，升糖指数和升糖负荷都较高'
+  },
+  {
+    id: 76,
+    name: '豆浆',
+    glycemicIndex: 30,
+    glycemicLoad: 3,
+    category: 'beverage',
+    description: '无糖豆浆含有植物蛋白和膳食纤维，升糖指数和升糖负荷都低'
+  },
+  {
+    id: 77,
+    name: '燕麦奶',
+    glycemicIndex: 40,
+    glycemicLoad: 7,
+    category: 'beverage',
+    description: '燕麦含有β-葡聚糖，可能有助于控制血糖，无糖版本升糖负荷较低'
+  },
+  {
+    id: 78,
+    name: '鲜榨橙汁',
+    glycemicIndex: 50,
+    glycemicLoad: 12,
+    category: 'beverage',
+    description: '比整个橙子的升糖指数更高，因为失去了大部分膳食纤维'
   }
 ];
