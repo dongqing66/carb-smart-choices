@@ -24,13 +24,13 @@ export function ThemeToggle() {
   return (
     <button
       onClick={handleToggle}
-      className="relative flex h-8 w-14 items-center justify-center rounded-full bg-muted/30 p-1 transition-colors duration-300"
+      className="relative flex h-8 w-14 items-center rounded-full bg-muted/30 p-1 transition-colors duration-300 touch-manipulation"
       aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
     >
       <div
-        className={`absolute inset-y-1 ${
-          theme === "dark" ? "right-1" : "left-1"
-        } flex h-6 w-6 items-center justify-center rounded-full bg-white shadow-sm transition-all duration-300`}
+        className={`absolute inset-y-1 flex h-6 w-6 items-center justify-center rounded-full bg-white shadow-sm transform transition-all duration-300 ${
+          theme === "dark" ? "translate-x-6" : "translate-x-0"
+        }`}
       >
         {theme === "dark" ? (
           <Moon className="h-4 w-4 text-blue-400" />
