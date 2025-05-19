@@ -6,6 +6,7 @@ import FoodCard from "@/components/FoodCard";
 import InfoSection from "@/components/InfoSection";
 import SearchBar from "@/components/SearchBar";
 import Header from "@/components/Header";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Index = () => {
@@ -24,7 +25,12 @@ const Index = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      <div className="relative">
+        <Header />
+        <div className="absolute right-4 top-4">
+          <ThemeToggle />
+        </div>
+      </div>
       
       <main className="container mx-auto px-4 py-8 flex-grow">
         {/* Search Bar */}
