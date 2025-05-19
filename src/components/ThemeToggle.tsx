@@ -3,9 +3,8 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { Sun, Moon, Laptop } from "lucide-react";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Sun, Moon } from "lucide-react";
+import { Switch } from "@/components/ui/switch";
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
@@ -16,44 +15,22 @@ export function ThemeToggle() {
     setMounted(true);
   }, []);
 
+  // 处理主题切换
+  const handleToggle = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   if (!mounted) return null;
 
   return (
-    <ToggleGroup type="single" value={theme} onValueChange={(value) => value && setTheme(value)} className="border rounded-md">
-      <TooltipProvider>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <ToggleGroupItem value="system" aria-label="自适应模式">
-              <Laptop className="h-4 w-4" />
-            </ToggleGroupItem>
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>自适应模式</p>
-          </TooltipContent>
-        </Tooltip>
-
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <ToggleGroupItem value="dark" aria-label="暗黑模式">
-              <Moon className="h-4 w-4" />
-            </ToggleGroupItem>
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>暗黑模式</p>
-          </TooltipContent>
-        </Tooltip>
-
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <ToggleGroupItem value="light" aria-label="亮色模式">
-              <Sun className="h-4 w-4" />
-            </ToggleGroupItem>
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>亮色模式</p>
-          </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
-    </ToggleGroup>
+    <div className="flex items-center space-x-2 bg-muted/30 px-3 py-1.5 rounded-full transition-all duration-300">
+      <Sun className={`h-4 w-4 transition-all duration-300 ${theme === 'light' ? 'text-yellow-500' : 'text-muted-foreground'}`} />
+      <Switch
+        checked={theme === "dark"}
+        onCheckedChange={handleToggle}
+        className="data-[state=checked]:bg-primary data-[state=unchecked]:bg-slate-200 dark:data-[state=unchecked]:bg-slate-700"
+      />
+      <Moon className={`h-4 w-4 transition-all duration-300 ${theme === 'dark' ? 'text-blue-400' : 'text-muted-foreground'}`} />
+    </div>
   );
 }
