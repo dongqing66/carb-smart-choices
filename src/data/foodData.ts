@@ -1,4 +1,3 @@
-
 export interface FoodItem {
   id: number;
   name: string;
@@ -118,6 +117,38 @@ export const foodItems: FoodItem[] = [
     glycemicLoad: 12,
     category: 'staple',
     description: '添加了全麦粉和其他粗粮，升糖指数中等'
+  },
+  {
+    id: 79,
+    name: '肠粉',
+    glycemicIndex: 68,
+    glycemicLoad: 15,
+    category: 'staple',
+    description: '由大米制作的薄皮卷，升糖指数较高'
+  },
+  {
+    id: 80,
+    name: '土豆粉',
+    glycemicIndex: 54,
+    glycemicLoad: 12,
+    category: 'staple',
+    description: '由土豆淀粉制成，升糖指数中等'
+  },
+  {
+    id: 81,
+    name: '魔芋粉',
+    glycemicIndex: 15,
+    glycemicLoad: 1,
+    category: 'staple',
+    description: '低热量、低碳水化合物，升糖指数很低'
+  },
+  {
+    id: 82,
+    name: '绿豆粉',
+    glycemicIndex: 38,
+    glycemicLoad: 8,
+    category: 'staple',
+    description: '由绿豆淀粉制成，富含蛋白质和纤维，升糖指数较低'
   },
   
   // Fruits
