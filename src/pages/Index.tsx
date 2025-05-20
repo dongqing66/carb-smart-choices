@@ -14,9 +14,7 @@ import {
   SelectTrigger, 
   SelectValue 
 } from "@/components/ui/select";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Check, SortAsc, SortDesc } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
@@ -28,6 +26,18 @@ const Index = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortOption, setSortOption] = useState<SortOption>("none");
   const [showLowGiGl, setShowLowGiGl] = useState(false);
+
+  // Count items by category for debugging
+  const categoryCount = useMemo(() => {
+    const counts: Record<string, number> = {};
+    foodCategories.forEach(cat => {
+      counts[cat.id] = foodItems.filter(item => item.category === cat.id).length;
+    });
+    return counts;
+  }, []);
+
+  console.log("Food items total count:", foodItems.length);
+  console.log("Category counts:", categoryCount);
 
   // Filter foods based on selected category, search query, and low GI/GL filter
   const filteredFoods = useMemo(() => {
@@ -168,6 +178,21 @@ const Index = () => {
               onClick={() => setSelectedCategory(category.id as FoodCategory)}
             />
           ))}
+        </div>
+
+        {/* Current Category Information */}
+        <div className="mb-4">
+          {selectedCategory !== "all" && (
+            <p className="text-muted-foreground">
+              当前分类: {foodCategories.find(c => c.id === selectedCategory)?.label || '所有'} 
+              ({filteredFoods.length} 项)
+            </p>
+          )}
+          {selectedCategory === "all" && (
+            <p className="text-muted-foreground">
+              显示所有食物 ({filteredFoods.length} 项)
+            </p>
+          )}
         </div>
 
         {/* Food Cards */}
