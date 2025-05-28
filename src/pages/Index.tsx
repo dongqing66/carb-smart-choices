@@ -213,7 +213,7 @@ const Index = () => {
 
       <footer className="bg-muted py-6 text-center text-sm text-muted-foreground">
         <div className="container mx-auto">
-          <p>© 2025 碳水智选 - 为糖前期患者设计的升糖指数指南</p>
+          <p>© 2025 饮食升糖助手 - 食物GI/GL速查指南</p>
         </div>
       </footer>
     </div>
